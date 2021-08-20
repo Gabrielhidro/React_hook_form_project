@@ -1,6 +1,12 @@
+import Register from "./Register"
+import Datas from "./Datas"
+import { Container } from "./styles"
 
-export default function HomePage(){
+export default function Pages(){
     return (
-        <h1>hello</h1>        
+        <Container>
+            <Register />
+            {/* <Datas /> */}
+        </Container>
     )
-} 
+}
