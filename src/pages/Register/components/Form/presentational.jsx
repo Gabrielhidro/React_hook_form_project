@@ -3,11 +3,11 @@ import { Button, Container, FormControl } from "./styles";
 
 export default function Form(props){
 
-    const { register, handleSubmit, subm } = props
+    const { register, handleSubmit, submitForm } = props
 
     return (
         <>
-            <Container onSubmit={handleSubmit(subm)}>
+            <Container onSubmit={handleSubmit(submitForm)}>
                 <input type="text" placeholder="Nome" required {...register("name")}/>
                 <input type="text" placeholder="Número do cartão" required="16" {...register("cardNumber")}/>
                 <input type="text" placeholder="Válidade" required {...register("validate")}/>

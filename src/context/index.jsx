@@ -1,13 +1,11 @@
 import { createContext, useState } from "react";
-import { useForm } from "react-hook-form";
 
 export const searchContext = createContext()
 
 export const SearchProvider = ({children}) => {
 
-    const [ efeito, setEfeito ] = useState([])
+    const [ convertArr, setConvertArr ] = useState([])
     const [ page, setPage] = useState(false)
-
 
     function changePage(){
         setPage(true)
@@ -15,7 +13,7 @@ export const SearchProvider = ({children}) => {
 
 
     return (
-        <searchContext.Provider value={{ efeito, setEfeito, changePage, page}}>
+        <searchContext.Provider value={{ convertArr, setConvertArr, changePage, page}}>
           {children}  
         </searchContext.Provider>
       )

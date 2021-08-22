@@ -9,17 +9,18 @@ import { searchContext } from '../../../../context';
 import FormPresentational from './presentational'
 
 export default function Form(){
-    const { register, handleSubmit } = useForm();
     const [ result, setResult ] = useState('');
-    const subm = async (item) => {
+    const { register, handleSubmit } = useForm();
+    const {changePage, setConvertArr} = useContext(searchContext)
+
+    const submitForm = (item) => {
         setResult(item);
-        context.changePage()
+        changePage()
     }
-    const context = useContext(searchContext)
 
     useEffect(() => {
-       context.setEfeito([result])
+        setConvertArr([result])
    }, [result])
 
-    return React.createElement(FormPresentational, {register, handleSubmit, subm })
+    return React.createElement(FormPresentational, {register, handleSubmit, submitForm })
 }

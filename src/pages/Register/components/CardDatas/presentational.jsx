@@ -1,21 +1,28 @@
+// Dependencies
+import { useContext } from "react";
+
+// Components
+import { searchContext } from "../../../../context";
+
 // Styled Components
 import { Container } from "./styles";
 
-export default function CardDatas(props){
+export default function CardDatas(){
 
-    const { efeitoContext } = props
+    const { convertArr } =  useContext(searchContext)
+
 
     return (
         <Container>
-            {efeitoContext.map((e, i) => {
+            {convertArr.map((item, index) => {
                 return (
-                <>
-                    <li>Nome: {e.name}</li>
-                    <li>Número do cartão: {e.cardNumber}</li>
-                    <li>Data de Validade: {e.validate}</li>
-                    <li>Código de Segurança: {e.cvv}</li>
-                    <li>Bandeira: {e.flag}</li>
-                </>
+                    <ul key={index}>
+                        <li>Nome: {item.name}</li>
+                        <li>Número do cartão: {item.cardNumber}</li>
+                        <li>Data de Validade: {item.validate}</li>
+                        <li>Código de Segurança: {item.cvv}</li>
+                        <li>Bandeira: {item.flag}</li>
+                    </ul>
                 )
             })}
         </Container>
