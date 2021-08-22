@@ -1,17 +1,13 @@
-import { useContext } from "react";
-import { searchContext } from "../../../../context";
+// Styled Components
 import { Container } from "./styles";
 
-export default function Datas(){
+export default function CardDatas(props){
 
-    const context =  useContext(searchContext)
-    const efeitoContext = context.efeito
-
-    console.log(efeitoContext);
+    const { efeitoContext } = props
 
     return (
         <Container>
-            {efeitoContext.map(e => {
+            {efeitoContext.map((e, i) => {
                 return (
                 <>
                     <li>Nome: {e.name}</li>

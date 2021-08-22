@@ -9,12 +9,16 @@ export const Container = styled.form`
     input,
     select {
         padding: 10px;
-        border-radius: 15px;
-        border: 1px solid #652c9b;
-        background: black;
-        color: #bebebe;
         width: 100%;
+
+        color: #bebebe;
         outline: none;
+
+        border-radius: 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #652c9b;
+        background: black;
     }
 `
 
@@ -26,10 +30,12 @@ export const FormControl = styled.div`
 
 export const Button = styled.button`
     width: 50%;
-    background: #652c9b;
-    border-radius: 15px;
-    color: white;
-    border: none;
     padding: 10px;
     margin: 20px auto;
+
+    color: white;
+    
+    background: #652c9b;
+    border-radius: 15px;
+    border: none;
 `

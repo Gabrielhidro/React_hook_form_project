@@ -1,11 +1,7 @@
-// Dependencies
-import { useContext } from "react";
-
 // Components
 import { CardImg } from '../../assets/Images';
 import Form from "./components/Form";
-import Datas from "./components/Datas";
-import { searchContext } from "../../context";
+import CardDatas from "./components/CardDatas";
 
 // Styled Components
 import { Container, Title, Header } from "./styles";
@@ -20,7 +16,7 @@ export default function Register(props){
                 <img src={CardImg} alt="Credit card" />
             </Header>
             <Title>Dados do cartão</Title>
-            {context.page ? <Datas /> : <Form />}
+            {context.page ? <CardDatas /> : <Form />}
         </Container>
     )
 }
