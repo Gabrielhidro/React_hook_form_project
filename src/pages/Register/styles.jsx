@@ -4,10 +4,12 @@ export const Container = styled.div`
 `
 
 export const Header = styled.div`
+    position: relative;
+
     padding-top: 170px;
+
     background: #762186;
     border-radius: 15px;
-    position: relative;
 
     img {
         position: absolute;
@@ -18,6 +20,7 @@ export const Header = styled.div`
 
 export const Title = styled.h1`
     margin-top: 90px;
+    
     color: #e0e0e0;
     text-align: center;
 `

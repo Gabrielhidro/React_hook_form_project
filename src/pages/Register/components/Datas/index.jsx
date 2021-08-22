@@ -14,10 +14,11 @@ export default function Datas(){
             {efeitoContext.map(e => {
                 return (
                 <>
-                    <li>{e.name}</li>
-                    <li>{e.cardNumber}</li>
-                    <li>{e.validate}</li>
-                    <li>{e.cvv}</li>
+                    <li>Nome: {e.name}</li>
+                    <li>Número do cartão: {e.cardNumber}</li>
+                    <li>Data de Validade: {e.validate}</li>
+                    <li>Código de Segurança: {e.cvv}</li>
+                    <li>Bandeira: {e.flag}</li>
                 </>
                 )
             })}

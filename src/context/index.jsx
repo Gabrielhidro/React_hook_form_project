@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const searchContext = createContext()

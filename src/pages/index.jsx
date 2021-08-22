@@ -1,10 +1,3 @@
-import Register from "./Register"
-import { Container } from "./styles"
+import PagesPresentational from './presentational'
 
-export default function Pages(){
-    return (
-        <Container>
-            <Register />            
-        </Container>
-    )
-}
+export default PagesPresentational

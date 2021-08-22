@@ -23,16 +23,16 @@ export default function Form(){
     return (
         <>
             <Container onSubmit={handleSubmit(subm)}>
-                <input type="text" placeholder="Nome" {...register("name")}/>
-                <input type="text" placeholder="Número do cartão" {...register("cardNumber")}/>
-                <input type="text" placeholder="Válidade" {...register("validate")}/>
+                <input type="text" placeholder="Nome" required {...register("name")}/>
+                <input type="text" placeholder="Número do cartão" required="16" {...register("cardNumber")}/>
+                <input type="text" placeholder="Válidade" required {...register("validate")}/>
                 <FormControl>
-                    <input type="text" placeholder="cvv" {...register("cvv")}/>
-                    <select name="" id="" >
+                    <input type="text" placeholder="cvv" required {...register("cvv")}/>
+                    <select name="" id="" required {...register("flag")}>
                         <option value="">Selecione a bandeira</option>
-                        <option value="">Visa</option>
-                        <option value="">Master Card</option>
-                        <option value="">American Express</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Master Card">Master Card</option>
+                        <option value="American Express">American Express</option>
                     </select>
                 </FormControl>
                 <Button>Cadastrar</Button>
