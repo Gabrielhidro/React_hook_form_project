@@ -2,26 +2,61 @@
 import { Button, Container, FormControl } from "./styles";
 
 export default function Form(props){
+  const {
+    register,
+    handleSubmit,
+    
+    updateInfo,
+  } = props
 
-    const { register, handleSubmit, submitForm } = props
+  return (
+    <Container onSubmit={handleSubmit(updateInfo)}>
+      <input
+        {...register('name', {
+          required: true,
+        })}
+        type="text"
+        placeholder="Nome"
+      />
 
-    return (
-        <>
-            <Container onSubmit={handleSubmit(submitForm)}>
-                <input type="text" placeholder="Nome" required {...register("name")}/>
-                <input type="text" placeholder="Número do cartão" required="16" {...register("cardNumber")}/>
-                <input type="text" placeholder="Válidade" required {...register("validate")}/>
-                <FormControl>
-                    <input type="text" placeholder="cvv" required {...register("cvv")}/>
-                    <select name="" id="" required {...register("flag")}>
-                        <option value="">Selecione a bandeira</option>
-                        <option value="Visa">Visa</option>
-                        <option value="Master Card">Master Card</option>
-                        <option value="American Express">American Express</option>
-                    </select>
-                </FormControl>
-                <Button>Cadastrar</Button>
-            </Container>
-        </>
-    )
+      <input
+        {...register('cardNumber', {
+          required: true,
+        })}
+        type="text"
+        placeholder="Número do cartão"
+      />
+
+      <input
+        {...register('expirationDate', {
+          required: true,
+        })}
+        type="text"
+        placeholder="Validade"
+      />
+
+      <FormControl>
+        <input
+          {...register('cvv', {
+            required: true,
+          })}
+          type="text"
+          placeholder="CVV"
+        />
+
+        <select
+          {...register('flag', {
+            required: true,
+          })}
+        >
+          <option value="">Selecione a bandeira</option>
+          <option value="Visa">Visa</option>
+          <option value="Master Card">Master Card</option>
+          <option value="American Express">American Express</option>
+        </select>
+      </FormControl>
+
+      <Button type='submit'>Cadastrar</Button>
+    </Container>
+  );
 }

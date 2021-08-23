@@ -1,15 +1,15 @@
-import { SearchProvider } from "./context";
+// Pages
+import { RegisterPage } from './pages';
+
+// Styles
 import { GlobalStyles } from "./GlobalStyle";
-import Pages from "./pages";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyles />
-      <SearchProvider>
-        <Pages />
-      </SearchProvider>
-    </div>
+      <RegisterPage />
+    </>
   );
 }
 

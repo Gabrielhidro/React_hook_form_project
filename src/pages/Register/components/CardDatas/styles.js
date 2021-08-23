@@ -1,11 +1,13 @@
+// Dependencies
 import styled from "styled-components";
 
 export const Container = styled.section`
   padding: 30px;
 
   ul {
-    list-style: inside;
     margin-top: 40px;
+
+    list-style: inside;
 
     li {
         margin-bottom: 30px;

@@ -1,3 +1,4 @@
+// Dependencies
 import styled from "styled-components";
 
 export const Container = styled.form`
@@ -12,13 +13,13 @@ export const Container = styled.form`
         width: 100%;
 
         color: #bebebe;
-        outline: none;
 
         border-radius: 15px;
         border-width: 1px;
         border-style: solid;
         border-color: #652c9b;
-        background: black;
+        background-color: black;
+        outline: none;
     }
 `
 
